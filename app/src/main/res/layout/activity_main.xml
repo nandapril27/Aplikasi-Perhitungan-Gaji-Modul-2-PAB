@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Masukan Nama Anda :"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/nama"
+                android:layout_width="fill_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:hint="Isikan Nama Lengkap Anda" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Sudah Menikah ?"
+                android:textColor="#000000" />
+
+            <CheckBox
+                android:id="@+id/menikah"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Menikah"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Golongan"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/rgGolongan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbGolongan1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Golongan 1"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/rbGolongan2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Golongan 2"
+                    android:textColor="#000000" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/hitung"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorAccent"
+                android:onClick="hitung"
+                android:text="Hitung Gaji" />
+
+            <TextView
+                android:id="@+id/outputNama"
+                android:layout_marginTop="40dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/outputStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/outputGaji"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
