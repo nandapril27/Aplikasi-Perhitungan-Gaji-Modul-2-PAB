@@ -1,115 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:text="Masukan Nama Anda :"
+            android:textColor="#000000" />
 
-            <TextView
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="fill_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:hint="Isikan Nama Lengkap Anda" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sudah Menikah ?"
+            android:textColor="#000000" />
+
+        <CheckBox
+            android:id="@+id/menikah"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Menikah"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Golongan"
+            android:textColor="#000000" />
+
+        <RadioGroup
+            android:id="@+id/rgGolongan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbGolongan1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Masukan Nama Anda :"
+                android:checked="true"
+                android:text="Golongan 1"
                 android:textColor="#000000" />
 
-            <EditText
-                android:id="@+id/nama"
-                android:layout_width="fill_parent"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content"
-                android:hint="Isikan Nama Lengkap Anda" />
-
-            <TextView
+            <RadioButton
+                android:id="@+id/rbGolongan2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Sudah Menikah ?"
+                android:text="Golongan 2"
                 android:textColor="#000000" />
+        </RadioGroup>
 
-            <CheckBox
-                android:id="@+id/menikah"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Menikah"
-                android:textColor="#000000" />
+        <Button
+            android:id="@+id/hitung"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorAccent"
+            android:onClick="hitung"
+            android:text="Hitung Gaji" />
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Golongan"
-                android:textColor="#000000" />
+        <TextView
+            android:id="@+id/hasilperhitungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-            <RadioGroup
-                android:id="@+id/rgGolongan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/outputNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-                <RadioButton
-                    android:id="@+id/rbGolongan1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Golongan 1"
-                    android:textColor="#000000" />
+        <TextView
+            android:id="@+id/outputStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-                <RadioButton
-                    android:id="@+id/rbGolongan2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Golongan 2"
-                    android:textColor="#000000" />
-            </RadioGroup>
+        <TextView
+            android:id="@+id/outputGolongan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-            <Button
-                android:id="@+id/hitung"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@color/colorAccent"
-                android:onClick="hitung"
-                android:text="Hitung Gaji" />
+        <TextView
+            android:id="@+id/outputGaji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-            <TextView
-                android:id="@+id/outputNama"
-                android:layout_marginTop="40dp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textColor="#000000"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/outputStatus"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textColor="#000000"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/outputGaji"
-                android:layout_marginTop="20dp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:textSize="30dp" />
-        </LinearLayout>
+    </LinearLayout>
     </LinearLayout>
 </ScrollView>

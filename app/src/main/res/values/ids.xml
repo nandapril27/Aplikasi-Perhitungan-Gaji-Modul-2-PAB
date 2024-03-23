@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nama" type="id" />
+    <item name="menikah" type="id" />
+    <item name="rgGolongan" type="id" />
+    <item name="rbGolongan1" type="id" />
+    <item name="rbGolongan2" type="id" />
+</resources>
